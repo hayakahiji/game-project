@@ -11,7 +11,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
     Image background, cloundImage, groundImage;
     Player player = new Player();
     Enemy bot = new Enemy(800, 430, 300); 
-    Ball ball = new Ball(500, 200);
+    Ball ball = new Ball(500, 200,60);
     
     // สถานะเกม
     int playerScore = 0, enemyScore = 0;
@@ -38,7 +38,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
     }
 
     private void resetRound() {
-        ball = new Ball(WIDTH / 2, 200);
+        ball = new Ball(WIDTH / 2, 200,70);
         player.x = 150;
         player.y = GROUND_Y - player.height;
         bot.x = 800;
