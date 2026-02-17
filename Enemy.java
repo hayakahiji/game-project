@@ -8,7 +8,7 @@ public class Enemy {
     double dy = 0;
     boolean onGround = false;
     int direction = -1;
-    int speed = 4;
+    int speed = 5;
 
     BufferedImage[] frames = new BufferedImage[6];
     int currentFrame = 0, animationTick = 0;
@@ -48,7 +48,7 @@ public class Enemy {
         }
 
         // ป้องกันไม่ให้ Bot วิ่งเข้าประตูตัวเองเกินไป
-        if (x < 400) x = 400; 
+        if (x < 280) x = 280; 
         if (x > GamePanel.WIDTH - width) x = GamePanel.WIDTH - width;
 
         animationTick++;
