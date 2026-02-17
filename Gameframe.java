@@ -7,7 +7,7 @@ public class Gameframe extends JFrame {
 
     public Gameframe() {
         add(new GamePanel());
-        setTitle("Game");
+        setTitle("Head Soccer");
         setSize(1000, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true); // ถ้าไม่มี frame ไม่ขึ้น

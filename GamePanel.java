@@ -47,7 +47,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 
     @Override
     protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
+        super.paintComponent(g); //กันภาพซ้อน
         Graphics2D g2d = (Graphics2D) g;
 
         // วาดฉาก
@@ -67,10 +67,10 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 
         // UI: Score & Time
         g2d.setColor(Color.BLUE);
-        g2d.setFont(new Font("Arial", Font.BOLD, 40));
-        g2d.drawString(playerScore + " - " + enemyScore, WIDTH/2 - 50, 50);
-        g2d.setFont(new Font("Arial", Font.PLAIN, 20));
-        g2d.drawString("Time: " + gameTime, WIDTH/2 - 35, 80);
+        g2d.setFont(new Font("Prompt", Font.BOLD, 40));
+        g2d.drawString(playerScore + " - " + enemyScore, WIDTH/2 - 65, 50);
+        g2d.setFont(new Font("Prompt", Font.PLAIN, 20));
+        g2d.drawString("Time: " + gameTime, WIDTH/2 - 55, 80);
 
         if (isGameOver) {
             drawGameOver(g2d);
