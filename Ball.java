@@ -2,6 +2,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 import java.io.File;
+import java.io.IOException;
 
 public class Ball {
     int x, y, size = 40;
@@ -10,8 +11,16 @@ public class Ball {
     double friction = 0.99;
     BufferedImage ballImage;
 
-    public Ball(int x, int y) {
-        this.x = x; this.y = y;
+    public Ball(int x, int y , int size) {
+        this.x = x; this.y = y; 
+        this.size = size;
+        try {
+            // ระบุที่อยู่ของไฟล์รูปภาพ (Path)
+            ballImage = ImageIO.read(new File("src/football.png")); 
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("ไม่สามารถโหลดรูปภาพได้ ตรวจสอบ Path อีกครั้ง");
+        }
     }
 
     public void update() {
